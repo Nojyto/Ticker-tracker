@@ -12,7 +12,8 @@
 #define host       "finnhub.io"
 #define apiUrl     "/api/v1/quote?symbol="
 #define apiKey     "&token=c5kv562ad3ibikglgeq0"
-//changes every few months
+//site fingerprint (changes every few months)
+//can get it from https://www.grc.com/fingerprints.htm
 #define fingPr     "95 E6 C6 0D D3 9E C0 B2 40 7C 47 66 B5 89 8F 51 72 81 27 A6"
 #define fadeTime   1000
 #define upInterval 300000
@@ -34,7 +35,7 @@ unsigned long prvTime = 0;
 
 void setup() {
     dp.init();
-    dp.flipScreenVertically();
+    //dp.flipScreenVertically();
     dp.setFont(ArialMT_Plain_16);
     dp.setTextAlignment(TEXT_ALIGN_CENTER_BOTH);
     updateDisplay("Connecting...");
